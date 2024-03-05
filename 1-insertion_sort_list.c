@@ -15,7 +15,7 @@ void swap(listint_t *a, listint_t *b)
 	a->next = b->next;
 	b->prev = a->prev;
 	a->prev = b;
-	n->next = a;
+	b->next = a;
 }
 
 /**
