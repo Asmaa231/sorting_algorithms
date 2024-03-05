@@ -46,20 +46,20 @@ size_t lomuto_partition(int *array, size_t size, ssize_t lo, ssize_t hi)
 
 	for (i = j = lo; j < hi; j++)
 		if (array[j] < pivot)
-			swap(array, size, &array[j], &array[i++]);
-	swap(array, size, &array[i], &array[hi]);
+			swapp(array, size, &array[j], &array[i++]);
+	swapp(array, size, &array[i], &array[hi]);
 
 	return (i);
 }
 
 /**
-*swap - function to swap
+*swapp - function to swap
 *@array: int array
 *@size: array size
 *@a: 1st value address
 *@b: 2nd value address
 */
-void swap(int *array, size_t size, int *a, int *b)
+void swapp(int *array, size_t size, int *a, int *b)
 {
 	if (*a != *b)
 	{
